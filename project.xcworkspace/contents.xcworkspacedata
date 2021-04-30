@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:styles.css">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/index.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/curriculum.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/professional.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/research.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/publications.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/teaching.html">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/Albert/Dropbox/McGill/Projects/Web page/other.html">
+   </FileRef>
+</Workspace>
