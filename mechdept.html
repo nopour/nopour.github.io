@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دپارتمان مهندسی مکانیک | دانشگاه صنعتی امیرکبیر</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    @import url('https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.css');
+    @import url('https://cdn.fontcdn.ir/Font/Persian/Nazaning/B-Nazanin.css');
+    body {
+      font-family: "B Yekan", sans-serif;
+      padding-top: 0;
+    }
+    header {
+      background-color: #003087;
+      color: white;
+      padding: 10px 0;
+      border-bottom: 1px solid #005cbf;
+    }
+    .header-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      font-size: 0.85rem;
+    }
+    .header-top a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: text-decoration 0.3s;
+    }
+    .header-top a:hover {
+      text-decoration: underline;
+      color: #b3d4fc;
+    }
+    .header-main {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .header-logo img {
+      height: 50px;
+      filter: brightness(0) invert(1);
+    }
+    .header-utility {
+      display: flex;
+      gap: 10px;
+    }
+    .header-utility a {
+      color: white;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .header-utility a.language {
+      background-color: #dc3545;
+    }
+    .header-utility a:not(.language) {
+      background-color: #005cbf;
+    }
+    .header-utility a:hover {
+      background-color: #b3d4fc;
+      color: #003087;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: #005cbf;
+      border-radius: 2px;
+    }
+    .navbar-nav .dropdown-menu {
+      background: #003087;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+    }
+    .navbar-nav .dropdown-item {
+      color: white;
+      font-family: "B Yekan", sans-serif;
+      padding: 8px 20px;
+    }
+    .navbar-nav .dropdown-item:hover {
+      background: #005cbf;
+      color: white;
+    }
+    .hero {
+      background: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://merajstudent.com/wp-content/uploads/2024/02/2021-05-190.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: right;
+      position: relative;
+      margin-bottom: 50px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .hero .logo-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 70px;
+      height: 90px;
+      filter: brightness(0) invert(1);
+    }
+    .hero .logo-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 90px;
+      height: 90px;
+    }
+    .sidebar-links {
+      position: sticky;
+      top: 20px;
+      width: 200px;
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-right: 0;
+    }
+    .sidebar-links h6 {
+      cursor: pointer;
+      margin-bottom: 15px;
+      color: #0d6efd;
+      padding: 5px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    .sidebar-links h6:hover {
+      background-color: #e9ecef;
+    }
+    .sidebar-links .sub-links {
+      display: none;
+      padding-right: 15px;
+      border-right: 2px solid #0d6efd;
+      margin-right: 5px;
+    }
+    .sidebar-links .active .sub-links {
+      display: block;
+    }
+    .sidebar-links a {
+      display: block;
+      padding: 8px 0;
+      color: #0d6efd;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .sidebar-links a:hover {
+      color: #0b5ed7;
+      text-decoration: underline;
+      padding-right: 5px;
+    }
+    .content-container {
+      margin-right: 220px;
+      padding-left: 20px;
+    }
+    .gallery-container {
+      position: relative;
+      text-align: center;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .gallery-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .gallery-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .gallery-controls button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .gallery-controls button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: "B Nazanin", "B Yekan", sans-serif;
+      font-size: 2rem;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .accordion-button {
+      background-color: #e0f0ff;
+      color: #000;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #c2e0ff;
+      color: #000;
+    }
+    .news-item {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: start;
+    }
+    .news-item img {
+      width: 80px;
+      height: 80px;
+      margin-left: 15px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .news-archive-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0d6efd;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .news-archive-btn:hover {
+      background-color: #0b5ed7;
+      color: white;
+    }
+    .section-boxes {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 50px 0;
+    }
+    .section-boxes .box {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 30%;
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .section-boxes .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .section-boxes .box img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .faculty-members {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .faculty-members .member {
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .faculty-members .member:hover {
+      transform: scale(1.05);
+    }
+    .faculty-members img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0d6efd;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-family: "B Yekan", sans-serif;
+      margin-top: 50px;
+      position: relative;
+    }
+    footer .logo {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 80px;
+      filter: brightness(0) invert(1);
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+    .floating-btn:hover {
+      background-color: #0b5ed7;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    .newsletter-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    @media (max-width: 768px) {
+      .sidebar-links {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+      .content-container {
+        margin-right: 0;
+        padding-left: 0;
+      }
+      .section-boxes .box {
+        width: 100%;
+      }
+      .faculty-members .member {
+        width: 150px;
+      }
+      .faculty-members img {
+        width: 120px;
+        height: 120px;
+      }
+      .newsletter-form {
+        max-width: 100%;
+        padding: 15px;
+      }
+      .hero .logo-right, .hero .logo-left {
+        top: 10px;
+      }
+      .gallery-caption {
+        font-size: 1.5rem;
+        padding: 15px;
+        height: 150px;
+      }
+      .header-logo img {
+        height: 35px;
+      }
+      .header-top {
+        font-size: 0.75rem;
+      }
+      .header-top a {
+        margin: 0 10px;
+      }
+      .header-utility {
+        gap: 5px;
+      }
+      .header-utility a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <a href="https://me.aut.ac.ir/news">اخبار و اطلاعیه‌ها</a>
+      <a href="https://me.aut.ac.ir/calendar">تقویم آموزشی</a>
+      <a href="https://me.aut.ac.ir/contact">تماس با ما</a>
+    </div>
+    <div class="header-main container">
+      <div class="header-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AKUT.svg" alt="لوگوی دانشگاه">
+      </div>
+      <div class="header-utility">
+        <a href="https://me.aut.ac.ir/en" class="language"><i class="bi bi-globe"></i></a>
+        <a href="tel:+982164543400"><i class="bi bi-telephone"></i></a>
+        <a href="https://me.aut.ac.ir/international"><i class="bi bi-globe2"></i></a>
+        <a href="https://me.aut.ac.ir/login"><i class="bi bi-box-arrow-in-right"></i></a>
+        <a href="https://me.aut.ac.ir/search"><i class="bi bi-search"></i></a>
+        <a href="https://me.aut.ac.ir"><i class="bi bi-house"></i></a>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutFaculty" data-bs-toggle="dropdown" aria-expanded="false">درباره دانشکده</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/president-message">پیام ریاست دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/introduction">معرفی دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/history">تاریخچه دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/honors">افتخارات دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/islami-scholarship">بورسیه دکتر محمدرضا اسلامی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/ethics">منشور اخلاقی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/organization">چارت سازمانی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/facilities">امکانات دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/gallery">گالری تصاویر</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/contact">تماس با دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/building-guide">راهنمای ساختمان</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/people">افراد</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/education">آموزش</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/graduate">تحصیلات تکمیلی</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/research">پژوهش و فناوری</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/industry">ارتباط با صنعت</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/international">همکاری‌های بین‌الملل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/achievements">تالار دستاوردها</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-logo">
+        <img src="https://me.aut.ac.ir/files/me/site/logo_fa.png" alt="لوگوی دپارتمان">
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <img class="logo-right" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AKUT.svg" alt="لوگوی دانشگاه">
+    <img class="logo-left" src="https://me.aut.ac.ir/files/me/site/logo_fa.png" alt="لوگوی دپارتمان">
+    <h1>دپارتمان مهندسی مکانیک</h1>
+    <p>دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 content-container">
+        <div class="mt-5">
+          <h2 class="text-center mb-4">نگارخانه تصاویر</h2>
+          <div class="gallery-container" id="gallerySection">
+            <img id="galleryImage" src="https://aut.ac.ir/files/ee/yekta_program/albums/alb_166_33d328b/4030.jpg" alt="تصویر دانشگاه">
+            <div class="gallery-caption" id="galleryCaption">نمای اصلی دانشگاه صنعتی امیرکبیر</div>
+            <div class="gallery-controls">
+              <button onclick="prevImage()">❮</button>
+              <button onclick="nextImage()">❯</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-5" id="newsSection">
+          <h2 class="text-center mb-4">اخبار</h2>
+          <div class="news-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5tDDC0G6MrqtqGBElsRgusGu1NRXJW7trA&s" alt="همایش فناوری‌های نوین">
+            <div>
+              <h6>برگزاری همایش فناوری‌های نوین</h6>
+              <p>این همایش با حضور استادان برجسته و شرکت‌های صنعتی برگزار می‌شود.</p>
+              <a href="https://me.aut.ac.ir/news/1" class="btn btn-sm btn-outline-primary">جزئیات بیشتر</a>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-hdfhyqY3ra8ocZNHk3P7634RnqFKWLxNIA&s" alt="آزمایشگاه جدید">
+            <div>
+              <h6>افتتاح آزمایشگاه جدید مکانیک سیالات</h6>
+              <p>با تجهیزات پیشرفته برای پروژه‌های تحقیقاتی.</p>
+              <a href="https://me.aut.ac.ir/news/2" class="btn btn-sm btn-outline-primary">جزئیات بیشتر</a>
+            </div>
+          </div>
+          <div class="text-start mt-4">
+            <a href="https://me.aut.ac.ir/news/archive" class="news-archive-btn">آرشیو اخبار و رویدادها</a>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <h2 class="text-center mb-4">تحصیلات تکمیلی | اعضای هیئت علمی | تالار افتخارات</h2>
+          <div class="section-boxes">
+            <div class="box">
+              <img src="https://meche.mit.edu/sites/default/files/styles/packery_horiz/public/2_521121-002D_0_0.jpg?itok=LxMVVCMv" alt="تحصیلات تکمیلی">
+              <h5>تحصیلات تکمیلی</h5>
+              <p>اطلاعات دوره‌های کارشناسی ارشد و دکتری</p>
+              <a href="https://me.aut.ac.ir/graduate" class="btn btn-primary mt-2">اطلاعات بیشتر</a>
+            </div>
+            <div class="box">
+              <img src="https://meche.mit.edu/sites/default/files/styles/packery_horiz/public/Lego%20460.png?itok=8E2MxE7j" alt="اعضای هیئت علمی">
+              <h5>اعضای هیئت علمی</h5>
+              <p>معرفی اساتید و زمینه‌های پژوهشی</p>
+              <a href="https://me.aut.ac.ir/faculty" class="btn btn-primary mt-2">اطلاعات بیشتر</a>
+            </div>
+            <div class="box">
+              <img src="https://media.licdn.com/dms/image/v2/C4E05AQHh4Fh6cR9xWQ/feedshare-thumbnail_720_1280/feedshare-thumbnail_720_1280/0/1655915312573?e=2147483647&v=beta&t=NWhIFvmebPcLYQkhFrUDewZuHBuZfmVTY6oZxVs-Kk4" alt="تالار افتخارات">
+              <h5>تالار افتخارات</h5>
+              <p>دستاوردهای پژوهشی و صنعتی</p>
+              <a href="https://me.aut.ac.ir/honors" class="btn btn-primary mt-2">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="text-center mb-4">معرفی اعضای هیئت علمی</h2>
+          <div class="faculty-members">
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/taghvaeipour', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4177_(Copy).jpg" alt="دکتر افشین تقوائی‌پور">
+              <h6>دکتر افشین تقوائی‌پور</h6>
+              <p>دینامیک و ارتعاشات</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/ghaffarirad', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4865_(Copy).jpg" alt="دکتر حامد غفاری‌راد">
+              <h6>دکتر حامد غفاری‌راد</h6>
+              <p>ارتعاشات و کنترل</p>
+            </div>
+<div class="member" onclick="window.open('https://me.aut.ac.ir/mohammadieh', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4169_(Copy).jpg" alt="دکتر محمد محمدی اقدم">
+              <h6>دکتر محمد محمدی اقدم</h6>
+              <p>مکانیک محاسباتی</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/ghaffarirad', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4723_(Copy).jpg" alt="دکتر عبدالرضا اوحدی همدانی">
+              <h6>دکتر عبدالرضا اوحدی همدانی</h6>
+              <p>دینامیک و ارتعاشات</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/ghaffarirad', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4197_(Copy).jpg" alt="دکتر علی عظیمی">
+              <h6>دکتر علی عظیمی</h6>
+              <p>دینامیک و بهینه‌سازی</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="text-center mb-4">سوالات متداول</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+                  چگونه می‌توانم ثبت‌نام کنم؟
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>برای ثبت‌نام در دوره‌های آموزشی می‌توانید از طریق سامانه آموزشی دانشگاه اقدام نمایید:</p>
+                  <ul>
+                    <li><a href="https://edu.aut.ac.ir/register" target="_blank">ثبت‌نام اینترنتی</a></li>
+                    <li>مراجعه حضوری به دپارتمان مهندسی مکانیک</li>
+                    <li>تماس با واحد آموزش: 021-64540</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+                  مهلت ثبت پایان‌نامه تا چه زمانی است؟
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>مهلت ثبت پایان‌نامه برای ترم‌های مختلف به شرح زیر است:</p>
+                  <ul>
+                    <li>ترم پاییز: تا 15 آبان</li>
+                    <li>ترم بهار: تا 15 اردیبهشت</li>
+                    <li>ترم تابستان: تا 15 مرداد</li>
+                  </ul>
+                  <p>برای اطلاعات بیشتر به <a href="https://me.aut.ac.ir/thesis" target="_blank">صفحه پایان‌نامه</a> مراجعه کنید。</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+                  ساعات کاری آموزش چگونه است؟
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>ساعات کاری واحد آموزش دپارتمان:</p>
+                  <ul>
+                    <li>شنبه تا چهارشنبه: 8:00 تا 14:00</li>
+                    <li>پنجشنبه‌ها: 8:00 تا 12:00</li>
+                  </ul>
+                  <p>در ایام تعطیلات رسمی دانشگاه تعطیل می‌باشد。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="text-center mb-4">آشنایی با دانش آموختگان</h2>
+          <div class="faculty-members">
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/taghvaeipour', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOpQmptqSFUl6kC6Hmqs6jgfboMDkKT8wluA&s" alt="دکتر رضا هدایتی">
+              <h6>دکتر رضا هدایتی</h6>
+              <p>هیئت علمی دانشگاه صنعتی خواجه نصیرالدین توسی</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/ghaffarirad', '_blank')">
+              <img src="https://me.aut.ac.ir/files/me/images/2W8A4865_(Copy).jpg" alt="دکتر حامد غفاری‌راد">
+              <h6>دکتر حامد غفاری‌راد</h6>
+              <p>هیئت علمی دانشگاه صنعتی امیرکبیر</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/ghaffarirad', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyp2qnhiUlrRVHkbBdcB8WYR98EgULvX2SYmCJ4l0iqfNbBV_diwT7-IYLx18jwODuOco&usqp=CAU" alt="دکتر فربد علیجانی">
+              <h6>دکتر فربد علیجانی</h6>
+              <p>هیئت علمی دانشگاه دلف (هلند)</p>
+            </div>
+            <div class="member" onclick="window.open('https://me.aut.ac.ir/mohammadieh', '_blank')">
+              <img src="https://www.ntu.ac.uk/__data/assets/image/0039/884739/Mahdi_Bodaghi.jpg" alt="دکتر مهدی بداغی">
+              <h6>دکتر مهدی بداغی</h6>
+              <p>هیئت علمی دانشگاه ناتینگهام (انگلستان)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="text-center mb-4">عضویت در خبرنامه</h2>
+          <div class="newsletter-form">
+            <form class="row justify-content-center">
+              <div class="col-md-8">
+                <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" required>
+                <div class="form-text">با وارد کردن ایمیل خود از آخرین اخبار و اطلاعیه‌ها مطلع شوید.</div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">عضویت</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="text-center mb-4">تحصیلات تکمیلی</h2>
+          <div class="accordion" id="graduateAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="graduate1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graduateCollapse1">
+                  آشنایی با معاونت تحصیلات تکمیلی
+                </button>
+              </h2>
+              <div id="graduateCollapse1" class="accordion-collapse collapse" data-bs-parent="#graduateAccordion">
+                <div class="accordion-body">
+                  <p>معاونت تحصیلات تکمیلی دپارتمان مهندسی مکانیک مسئول هماهنگی و نظارت بر برنامه‌های کارشناسی ارشد و دکتری است.</p>
+                  <a href="https://me.aut.ac.ir/graduate/about" class="btn btn-sm btn-outline-primary">اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="graduate2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graduateCollapse2">
+                  کارشناسی ارشد
+                </button>
+              </h2>
+              <div id="graduateCollapse2" class="accordion-collapse collapse" data-bs-parent="#graduateAccordion">
+                <div class="accordion-body">
+                  <p>دوره‌های کارشناسی ارشد در زمینه‌های مختلف مهندسی مکانیک با تمرکز بر پژوهش و کاربردهای صنعتی.</p>
+                  <a href="https://me.aut.ac.ir/graduate/masters" class="btn btn-sm btn-outline-primary">اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="graduate3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graduateCollapse3">
+                  دکتری تخصصی
+                </button>
+              </h2>
+              <div id="graduateCollapse3" class="accordion-collapse collapse" data-bs-parent="#graduateAccordion">
+                <div class="accordion-body">
+                  <p>برنامه دکتری تخصصی برای پرورش پژوهشگران و متخصصان در حوزه‌های پیشرفته مهندسی مکانیک.</p>
+                  <a href="https://me.aut.ac.ir/graduate/phd" class="btn btn-sm btn-outline-primary">اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="graduate4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#graduateCollapse4">
+                  برنامه‌ها و سامانه‌ها
+                </button>
+              </h2>
+              <div id="graduateCollapse4" class="accordion-collapse collapse" data-bs-parent="#graduateAccordion">
+                <div class="accordion-body">
+                  <p>دسترسی به سامانه‌های آموزشی و برنامه‌های مرتبط با تحصیلات تکمیلی دپارتمان.</p>
+                  <a href="https://me.aut.ac.ir/graduate/systems" class="btn btn-sm btn-outline-primary">اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 ms-0">
+        <div class="sidebar-links" id="sidebar">
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">سامانه‌ها</h6>
+            <div class="sub-links">
+              <a href="https://edu.aut.ac.ir/" target="_blank">سامانه آموزشی</a>
+              <a href="https://research.aut.ac.ir/" target="_blank">سامانه پژوهشی</a>
+              <a href="https://lib.aut.ac.ir/" target="_blank">سامانه کتابخانه</a>
+              <a href="https://me.aut.ac.ir/phonebook" target="_blank">دفتر تلفن</a>
+              <a href="https://me.aut.ac.ir/faculty/edit" target="_blank">ویرایش رزومه اساتید</a>
+              <a href="https://me.aut.ac.ir/internship" target="_blank">کارورزی و کاریابی</a>
+              <a href="https://me.aut.ac.ir/suggestions" target="_blank">سامانه جامع نظام پیشنهادها</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">اطلاعات آموزشی</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/education" target="_blank">تقویم آموزشی</a>
+              <a href="https://me.aut.ac.ir/syllabus" target="_blank">سرفصل دروس</a>
+              <a href="https://me.aut.ac.ir/regulations" target="_blank">آیین‌نامه‌ها</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">ارتباطات</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/contact" target="_blank">تماس با دپارتمان</a>
+              <a href="mailto:mech@aut.ac.ir">ایمیل دپارتمان</a>
+              <a href="https://me.aut.ac.ir/location" target="_blank">موقعیت مکانی</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">دسترسی سریع</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/faculty" target="_blank">اعضای هیئت علمی</a>
+              <a href="https://alumni.aut.ac.ir/" target="_blank">جامعه دانش‌آموختگان</a>
+              <a href="https://me.aut.ac.ir/links" target="_blank">پیوندها</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="floating-btn" onclick="location.href='mailto:mech@aut.ac.ir'">
+    <i class="bi bi-envelope"></i> تماس با ما
+  </button>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>ارتباط با ما</h5>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AKUT.svg" alt="لوگوی دانشگاه" style="width: 60px; height: 80px; filter: brightness(0) invert(1); margin-bottom: 10px;">
+          <p>آدرس جدید: ایران - تهران - میدان ولیعصر - خیابان حافظ - پلاک ۳۵۰<br>صندوق پستی: ۴۴۱۳-۱۵۸۷۵</p>
+          <p>آدرس قبلی: ایران - تهران - خیابان حافظ - پلاک ۴۲۴<br>صندوق پستی: ۴۴۱۳-۱۵۸۷۵</p>
+          <p>ایمیل: <a href="mailto:office.me@aut.ac.ir">office.me@aut.ac.ir</a></p>
+          <p>تلفن: ۹۸+ (۲۱) ۶۶۴۱۹۷۳۶<br>۹۸+ (۲۱) ۶۴۵۴۳۴۰۰</p>
+          <p>کد پستی: ۱۵۹۱۶۳۴۳۱۱</p>
+        </div>
+        <div class="col-md-3">
+          <h5>لینک‌های مفید</h5>
+          <p><a href="https://aut.ac.ir">دانشگاه صنعتی امیرکبیر</a></p>
+          <p><a href="https://me.aut.ac.ir">دپارتمان مهندسی مکانیک</a></p>
+          <p><a href="https://lib.aut.ac.ir">کتابخانه مرکزی</a></p>
+          <p><a href="https://me.aut.ac.ir/faculty">اعضای هیئت علمی</a></p>
+          <p><a href="https://alumni.aut.ac.ir">جامعه دانش‌آموختگان</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>پیوندهای سریع</h5>
+          <p><a href="https://edu.aut.ac.ir">سامانه آموزشی</a></p>
+          <p><a href="https://me.aut.ac.ir/calendar">تقویم آموزشی</a></p>
+          <p><a href="https://me.aut.ac.ir/contact">تماس با دپارتمان</a></p>
+          <p><a href="https://me.aut.ac.ir/internship">کارورزی و کاریابی</a></p>
+          <p><a href="https://me.aut.ac.ir/suggestions">سامانه جامع نظام پیشنهادها</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>پیوندهای دولتی و علمی</h5>
+          <p><a href="https://leader.ir" target="_blank">دفتر مقام معظم رهبری</a></p>
+          <p><a href="https://president.ir" target="_blank">دفتر ریاست جمهوری</a></p>
+          <p><a href="https://msrt.ir" target="_blank">وزارت علوم، تحقیقات و فناوری</a></p>
+          <p><a href="https://isti.ir" target="_blank">معاونت علمی و فناوری ریاست جمهوری</a></p>
+          <p><a href="https://bonyadnelite.ir" target="_blank">بنیاد علمی نخبگان</a></p>
+          <p><a href="https://wsis.msrt.ir" target="_blank">صندوق رفاه دانشجویان وزارت علوم</a></p>
+          <p><a href="https://insf.org" target="_blank">صندوق حمایت از پژوهشگران و فناوران کشور</a></p>
+          <p><a href="https://insf.org" target="_blank">صندوق حمایت از پژوهشگران</a></p>
+          <p><a href="https://cstp.ir" target="_blank">نقشه جامع علمی کشور</a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p>© ۲۰۲۵ دپارتمان مهندسی مکانیک - دانشگاه صنعتی امیرکبیر</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // گالری تصاویر
+    const images = [
+      "https://aut.ac.ir/files/ee/yekta_program/albums/alb_166_33d328b/4030.jpg",
+      "https://meche.mit.edu/sites/default/files/styles/hero/public/slides/SeaPerch_2058.jpg?itok=NJdsokIh",
+      "https://meche.mit.edu/sites/default/files/styles/hero/public/slides/Raman_Iris%20C.jpg?itok=M9DQ4jLF"
+    ];
+    const captions = [
+      "نمای اصلی دانشگاه صنعتی امیرکبیر",
+      "آزمایشگاه پیشرفته مهندسی مکانیک",
+      "پروژه‌های تحقیقاتی دپارتمان"
+    ];
+    let current = 0;
+    const galleryImage = document.getElementById("galleryImage");
+    const galleryCaption = document.getElementById("galleryCaption");
+
+    function showImage(index) {
+      galleryImage.style.opacity = 0;
+      galleryCaption.style.opacity = 0;
+      setTimeout(() => {
+        galleryImage.src = images[index];
+        galleryCaption.textContent = captions[index];
+        galleryImage.style.opacity = 1;
+        galleryCaption.style.opacity = 1;
+      }, 500);
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }
+
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    }
+
+    setInterval(nextImage, 5000);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        prevImage();
+      } else if (event.key === "ArrowRight") {
+        nextImage();
+      }
+    });
+
+    // منوی سایدبار
+    function toggleSubLinks(element) {
+      const parent = element.closest('.link-group');
+      const isActive = parent.classList.contains('active');
+      document.querySelectorAll('.link-group').forEach(group => {
+        group.classList.remove('active');
+      });
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.sidebar-links')) {
+        document.querySelectorAll('.link-group').forEach(group => {
+          group.classList.remove('active');
+        });
+      }
+    });
+
+    // محدود کردن موقعیت سایدبار
+    function adjustSidebarPosition() {
+      const sidebar = document.getElementById('sidebar');
+      const gallerySection = document.getElementById('gallerySection');
+      const newsSection = document.getElementById('newsSection');
+      const footer = document.getElementById('footer');
+      const galleryTop = gallerySection.getBoundingClientRect().top + window.pageYOffset;
+      const newsTop = newsSection.getBoundingClientRect().top + window.pageYOffset;
+      const footerTop = footer.getBoundingClientRect().top + window.pageYOffset;
+      const scrollTop = window.pageYOffset;
+      const sidebarHeight = sidebar.offsetHeight;
+      const offset = 20;
+
+      if (scrollTop + sidebarHeight + offset > footerTop) {
+        sidebar.style.position = 'absolute';
+        sidebar.style.top = `${footerTop - sidebarHeight - galleryTop}px`;
+      } else if (scrollTop + offset > newsTop) {
+        sidebar.style.position = 'fixed';
+        sidebar.style.top = `${offset}px`;
+      } else {
+        sidebar.style.position = 'absolute';
+        sidebar.style.top = `${newsTop - galleryTop}px`;
+      }
+    }
+
+    window.addEventListener('scroll', adjustSidebarPosition);
+    window.addEventListener('resize', adjustSidebarPosition);
+    document.addEventListener('DOMContentLoaded', adjustSidebarPosition);
+  </script>
+</body>
+</html>

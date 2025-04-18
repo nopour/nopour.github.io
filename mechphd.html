@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحصیلات تکمیلی دکتری | دپارتمان مهندسی مکانیک</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    @import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+    body {
+      font-family: "Vazir", sans-serif;
+      padding-top: 0;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://merajstudent.com/wp-content/uploads/2024/02/2021-05-190.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 10px 0;
+      border-bottom: 1px solid #005cbf;
+    }
+    .header-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      font-size: 0.85rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+    .header-top a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: text-decoration 0.3s;
+    }
+    .header-top a:hover {
+      text-decoration: underline;
+      color: #b3d4fc;
+    }
+    .header-main {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .header-logo img {
+      height: 50px;
+      filter: brightness(0) invert(1);
+    }
+    .header-utility {
+      display: flex;
+      gap: 10px;
+    }
+    .header-utility a {
+      color: white;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .header-utility a.language {
+      background-color: #dc3545;
+    }
+    .header-utility a:not(.language) {
+      background-color: #005cbf;
+    }
+    .header-utility a:hover {
+      background-color: #b3d4fc;
+      color: #003087;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: #005cbf;
+      border-radius: 2px;
+    }
+    .navbar-nav .dropdown-menu {
+      background: #003087;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+    }
+    .navbar-nav .dropdown-item {
+      color: white;
+      font-family: "Vazir", sans-serif;
+      padding: 8px 20px;
+    }
+    .navbar-nav .dropdown-item:hover {
+      background: #005cbf;
+      color: white;
+    }
+    .sidebar-links {
+      position: sticky;
+      top: 20px;
+      width: 200px;
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-right: 0;
+    }
+    .sidebar-links h6 {
+      cursor: pointer;
+      margin-bottom: 15px;
+      color: #0d6efd;
+      padding: 5px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    .sidebar-links h6:hover {
+      background-color: #e9ecef;
+    }
+    .sidebar-links .sub-links {
+      display: none;
+      padding-right: 15px;
+      border-right: 2px solid #0d6efd;
+      margin-right: 5px;
+    }
+    .sidebar-links .active .sub-links {
+      display: block;
+    }
+    .sidebar-links a {
+      display: block;
+      padding: 8px 0;
+      color: #0d6efd;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .sidebar-links a:hover {
+      color: #0b5ed7;
+      text-decoration: underline;
+      padding-right: 5px;
+    }
+    .content-container {
+      margin-right: 220px;
+      padding-left: 20px;
+    }
+    .accordion-button {
+      background-color: #e0f0ff;
+      color: #000;
+      font-family: "Vazir", sans-serif;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #c2e0ff;
+      color: #000;
+    }
+    .accordion-body {
+      font-family: "Vazir", sans-serif;
+    }
+    .forms-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .table {
+      margin-bottom: 20px;
+      font-family: "Vazir", sans-serif;
+      color: #333;
+    }
+    .table th {
+      background-color: #e0f0ff;
+      padding: 10px;
+      border: 1px solid #dee2e6;
+    }
+    .table td {
+      padding: 10px;
+      border: 1px solid #dee2e6;
+      word-wrap: break-word;
+      max-width: 300px;
+    }
+    .table tr:hover {
+      background-color: #e9ecef;
+    }
+    .social-share {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .social-share a {
+      color: white;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+      position: relative;
+    }
+    .social-share a:hover {
+      transform: scale(1.1);
+    }
+    .social-share a::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 60px;
+      background: #333;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .social-share a:hover::after {
+      opacity: 1;
+    }
+    .social-share a.telegram { background-color: #0088cc; }
+    .social-share a.whatsapp { background-color: #25d366; }
+    .social-share a.linkedin { background-color: #0077b5; }
+    .social-share a.twitter { background-color: #1da1f2; }
+    .social-share a.print { background-color: #6c757d; }
+    .comments-section {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .comments-section textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .students-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .students-grid .student {
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .students-grid .student:hover {
+      transform: scale(1.05);
+    }
+    .students-grid img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0d6efd;
+      margin-bottom: 10px;
+    }
+    .flowchart {
+      margin: 30px 0;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+    .flowchart svg {
+      min-width: 800px;
+    }
+    .flowchart .node {
+      fill: #87CEEB;
+      stroke: #0d6efd;
+      stroke-width: 2px;
+    }
+    .flowchart .node text {
+      fill: white;
+      font-family: "Vazir", sans-serif;
+      font-size: 14px;
+    }
+    .flowchart .arrow {
+      stroke: #0d6efd;
+      stroke-width: 2px;
+      fill: none;
+    }
+    .semester-grid-section {
+      margin: 30px 0;
+    }
+    .semester-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .semester-box {
+      background: #f8f9fa;
+      border: 1.5px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      aspect-ratio: 2/1;
+      cursor: pointer;
+      transition: transform 0.4s;
+    }
+    .semester-box:hover {
+      transform: scale(1.05);
+    }
+    .semester-box span {
+      font-size: 1.2rem;
+      font-family: "Vazir", sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-family: "Vazir", sans-serif;
+      margin-top: 50px;
+      position: relative;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+    .floating-btn:hover {
+      background-color: #0b5ed7;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 992px) {
+      .semester-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .sidebar-links {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+      .content-container {
+        margin-right: 0;
+        padding-left: 0;
+      }
+      .header-logo img {
+        height: 35px;
+      }
+      .header-top {
+        font-size: 0.75rem;
+      }
+      .header-top a {
+        margin: 0 10px;
+      }
+      .header-utility {
+        gap: 5px;
+      }
+      .header-utility a {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+      }
+      .flowchart svg {
+        min-width: 100%;
+      }
+      .flowchart .node text {
+        font-size: 12px;
+      }
+      .semester-grid {
+        grid-template-columns: 1fr;
+      }
+      .semester-box {
+        min-height: 80px;
+      }
+      .semester-box span {
+        font-size: 1rem;
+      }
+      .students-grid .student {
+        width: 150px;
+      }
+      .students-grid img {
+        width: 100px;
+        height: 100px;
+      }
+      .table td {
+        max-width: 150px;
+        font-size: 0.9rem;
+      }
+      .social-share a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+      .social-share a::after {
+        font-size: 0.7rem;
+        bottom: 50px;
+      }
+      footer img {
+        width: 50px;
+        height: 66px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <a href="https://me.aut.ac.ir/news">اخبار و اطلاعیه‌ها</a>
+      <a href="https://me.aut.ac.ir/calendar">تقویم آموزشی</a>
+      <a href="https://me.aut.ac.ir/contact">تماس با ما</a>
+    </div>
+    <div class="header-main container">
+      <div class="header-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AKUT.svg" alt="لوگوی دانشگاه">
+      </div>
+      <div class="header-utility">
+        <a href="https://me.aut.ac.ir/en" class="language"><i class="bi bi-globe"></i></a>
+        <a href="tel:+982164543400"><i class="bi bi-telephone"></i></a>
+        <a href="https://me.aut.ac.ir/international"><i class="bi bi-globe2"></i></a>
+        <a href="https://me.aut.ac.ir/login"><i class="bi bi-box-arrow-in-right"></i></a>
+        <a href="https://me.aut.ac.ir/search"><i class="bi bi-search"></i></a>
+        <a href="https://me.aut.ac.ir"><i class="bi bi-house"></i></a>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutFaculty" data-bs-toggle="dropdown" aria-expanded="false">درباره دانشکده</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/president-message">پیام ریاست دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/introduction">معرفی دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/history">تاریخچه دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/honors">افتخارات دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/islami-scholarship">بورسیه دکتر محمدرضا اسلامی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/ethics">منشور اخلاقی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/organization">چارت سازمانی</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/facilities">امکانات دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/gallery">گالری تصاویر</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/contact">تماس با دانشکده</a></li>
+                <li><a class="dropdown-item" href="https://me.aut.ac.ir/about/building-guide">راهنمای ساختمان</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/people">افراد</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/education">آموزش</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/graduate">تحصیلات تکمیلی</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/research">پژوهش و فناوری</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/industry">ارتباط با صنعت</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/international">همکاری‌های بین‌الملل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://me.aut.ac.ir/achievements">تالار دستاوردها</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-logo">
+        <img src="https://me.aut.ac.ir/files/me/site/logo_fa.png" alt="لوگوی دپارتمان">
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 content-container">
+        <div class="my-5 forms-section" id="formsSection">
+          <h2 class="text-center mb-4">فرم‌های آموزشی مقطع دکتری</h2>
+          <p class="text-center text-muted mb-4">تاریخ ارسال: ۱۳۹۸/۱۰/۲۵</p>
+	<p class="text-center text-muted mb-4">فلوچارت روند دکتری تخصصی مهندسی مکانیک</p>
+          <div class="flowchart">
+            <svg width="100%" height="150" viewBox="0 0 900 150">
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#0d6efd"/>
+                </marker>
+              </defs>
+              <g>
+                <circle class="node" cx="800" cy="75" r="40"/>
+                <text x="800" y="75" text-anchor="middle" dy=".3em">قبولی</text>
+                <path class="arrow" d="M760 75 H690" marker-end="url(#arrowhead)"/>
+                <circle class="node" cx="650" cy="75" r="40"/>
+                <text x="650" y="75" text-anchor="middle" dy=".3em">دروس</text>
+                <path class="arrow" d="M610 75 H540" marker-end="url(#arrowhead)"/>
+                <circle class="node" cx="500" cy="75" r="40"/>
+                <text x="500" y="75" text-anchor="middle" dy=".3em">آزمون جامع</text>
+                <path class="arrow" d="M460 75 H390" marker-end="url(#arrowhead)"/>
+                <circle class="node" cx="350" cy="75" r="40"/>
+                <text x="350" y="75" text-anchor="middle" dy=".3em">پروپوزال</text>
+                <path class="arrow" d="M310 75 H240" marker-end="url(#arrowhead)"/>
+                <circle class="node" cx="200" cy="75" r="40"/>
+                <text x="200" y="75" text-anchor="middle" dy=".3em">پژوهش</text>
+                <path class="arrow" d="M160 75 H90" marker-end="url(#arrowhead)"/>
+                <circle class="node" cx="50" cy="75" r="40"/>
+                <text x="50" y="75" text-anchor="middle" dy=".3em">دفاع</text>
+              </g>
+            </svg>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>ردیف</th>
+                  <th>فرم‌ها</th>
+                  <th>ملاحظات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>۱</td>
+                  <td>فرم درخواست آموزشی دانشجو</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۲</td>
+                  <td>فرم انتخاب واحد مهمان به سایر دانشکده‌ها</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۳</td>
+                  <td>فرم انتخاب واحد مهمان به سایر دانشگاه‌ها</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۴</td>
+                  <td>فرم پیشنهاد مقدماتی زمینه تحقیقاتی و دروس آموزشی دانشجویان دکتری</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۵</td>
+                  <td>فرم ۱ امتحان جامع</td>
+                  <td>فرم امتحان جامع ۲ از طریق پورتال و توسط دفتر تحصیلات تکمیلی دانشکده در اختیار گذاشته می‌شود.</td>
+                </tr>
+                <tr>
+                  <td>۶</td>
+                  <td>سرفصل‌های آزمون جامع</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۷</td>
+                  <td>فرم تأیید استاد راهنما مبنی بر آمادگی دانشجوی دکتری جهت دفاع از پیشنهاد رساله</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۸</td>
+                  <td>فرم پیشنهاد استاد راهنما جهت هیئت داوران پیشنهاد رساله</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۹</td>
+                  <td>فرم علت تأخیر دانشجو دکتری فقط برای نیمسال پنجم</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۰</td>
+                  <td>خلاصه وضعیت تحصیلی دانشجویان دکتری و دلایل تأخیر در ارائه پیشنهاد رساله از نیمسال ششم به بعد</td>
+                  <td>علاوه بر فرم ردیف ۱۰، فرم شماره ۱ نیز باید تکمیل شود.</td>
+                </tr>
+                <tr>
+                  <td>۱۱</td>
+                  <td>فرم تصویب پیشنهاد رساله</td>
+                  <td>بعد از دفاع از پیشنهاد رساله لازم است دانشجو فرم‌های ردیف ۱۱، ۱۲ و ۱۳ را تکمیل نماید.</td>
+                </tr>
+                <tr>
+                  <td>۱۲</td>
+                  <td>شناسنامه پیشنهاد رساله</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۳</td>
+                  <td>نامه تأییدیه نسخه نهایی پیشنهاد رساله توسط استاد راهنما</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۴</td>
+                  <td>فرم تأیید کفایت تحقیق رساله جهت دفاع نهایی دانشجویان دکتری</td>
+                  <td>فرم‌های ردیف ۱۴، ۱۵ و ۱۶ جهت درخواست مجوز دفاع از رساله می‌باشد.</td>
+                </tr>
+                <tr>
+                  <td>۱۵</td>
+                  <td>فرم بررسی مقالات دانشجویان دکتری جهت صدور مجوز دفاع نهایی با رتبه عالی</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۶</td>
+                  <td>فرم بررسی مقالات دانشجویان دکتری جهت صدور مجوز دفاع نهایی با یک سطح پایین‌تر</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۷</td>
+                  <td>آگهی جلسه دفاعیه</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۱۸</td>
+                  <td>فرم شماره ۱ تسویه حساب</td>
+                  <td>فرم‌های شماره ۱، ۲ و ۳ تسویه حساب برای دانشجویان فارغ‌التحصیل</td>
+                </tr>
+                <tr>
+                  <td>۱۹</td>
+                  <td>فرم شماره ۲ تسویه حساب</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۲۰</td>
+                  <td>فرم شماره ۳ تسویه حساب</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>۲۱</td>
+                  <td>فرم تسویه حساب برای دانشجویان انصرافی و یا محروم از تحصیل</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="social-share">
+            <a href="#" class="telegram" data-tooltip="تلگرام"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="whatsapp" data-tooltip="واتساپ"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="linkedin" data-tooltip="لینکدین"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="twitter" data-tooltip="توییتر"><i class="bi bi-twitter"></i></a>
+            <a href="javascript:window.print()" class="print" data-tooltip="چاپ"><i class="bi bi-printer"></i></a>
+          </div>
+          <div class="mt-3">
+            <p>دفعات مشاهده: ۱۲۳۴ بار | دفعات چاپ: ۵۶ بار | دفعات ارسال به دیگران: ۷۸ بار</p>
+            <div class="mb-3">
+              <label class="form-label">نام یا پست الکترونیک</label>
+              <input type="text" class="form-control" disabled placeholder="غیرفعال">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">کد امنیتی</label>
+              <input type="text" class="form-control" disabled placeholder="غیرفعال">
+            </div>
+          </div>
+          <div class="comments-section">
+            <h5 class="mb-3">نظرات</h5>
+            <div class="mb-3">
+              <label class="form-label">نظر خود را بنویسید</label>
+              <textarea class="form-control" disabled placeholder="این بخش برای نمایش است"></textarea>
+            </div>
+            <button class="btn btn-primary" disabled>ارسال نظر</button>
+          </div>
+        </div>
+
+<div class="my-5 semester-grid-section" style="background-color: #E0F7FA;">
+  <h2 class="text-center mb-4">فرم‌ها و راهنمایی‌های ویژه هر ترم دکتری تخصصی</h2>
+  <div class="semester-grid">
+    <div class="semester-box"><span>ترم ۱</span></div>
+    <div class="semester-box"><span>ترم ۲</span></div>
+    <div class="semester-box"><span>ترم ۳</span></div>
+    <div class="semester-box"><span>ترم ۴</span></div>
+    <div class="semester-box"><span>ترم ۵</span></div>
+    <div class="semester-box"><span>ترم ۶</span></div>
+    <div class="semester-box"><span>ترم ۷</span></div>
+    <div class="semester-box"><span>ترم ۸</span></div>
+    <div class="semester-box"><span>ترم ۸ به بعد</span></div>
+  </div>
+</div>
+
+        <div class="my-5">
+          <h2 class="text-center mb-4">سوالات متداول مقطع دکتری</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+                  مدارک لازم برای ثبت‌نام در مقطع دکتری چیست؟
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>برای ثبت‌نام در دوره دکتری، مدارک زیر مورد نیاز است:</p>
+                  <ul>
+                    <li>مدرک کارشناسی ارشد با معدل حداقل ۱۵</li>
+                    <li>رزومه علمی و پژوهشی</li>
+                    <li>توصیه‌نامه از اساتید</li>
+                    <li>نمره آزمون دکتری سازمان سنجش</li>
+                    <li>گواهی شرکت در مصاحبه</li>
+                  </ul>
+                  <p>جزئیات بیشتر در <a href="https://me.aut.ac.ir/graduate/phd" target="_blank">صفحه تحصیلات تکمیلی</a>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+                  آزمون جامع چگونه برگزار می‌شود؟
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>آزمون جامع شامل دو بخش کتبی و شفاهی است که معمولاً در نیمسال سوم یا چهارم برگزار می‌شود. دانشجو باید دروس اصلی را با موفقیت گذرانده و فرم‌های مربوطه (ردیف ۵ و ۶) را تکمیل کند.</p>
+                  <p>برای اطلاعات بیشتر به <a href="https://me.aut.ac.ir/graduate/comprehensive-exam" target="_blank">صفحه آزمون جامع</a> مراجعه کنید.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+                  چه تعداد مقاله برای دفاع نهایی مورد نیاز است؟
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>برای دفاع نهایی، حداقل دو مقاله در مجلات معتبر (ISI یا Scopus) مورد نیاز است. فرم‌های ردیف ۱۵ و ۱۶ برای بررسی مقالات استفاده می‌شوند.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
+                  مهلت ارائه پروپوزال چیست؟
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>پروپوزال باید تا پایان نیمسال پنجم ارائه شود. در صورت تأخیر، فرم‌های ردیف ۹ و ۱۰ باید تکمیل شوند.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5">
+                  فرآیند تسویه حساب پس از دفاع چگونه است؟
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>پس از دفاع، دانشجو باید فرم‌های تسویه حساب (ردیف ۱۸، ۱۹، ۲۰) را تکمیل کرده و با واحد تحصیلات تکمیلی هماهنگ کند.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6">
+                  آیا امکان تمدید سنوات تحصیلی وجود دارد؟
+                </button>
+              </h2>
+              <div id="faqCollapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>بله، تمدید سنوات تا سقف ۱۲ ترم با تأیید استاد راهنما و شورای تحصیلات تکمیلی امکان‌پذیر است. درخواست باید از طریق فرم درخواست آموزشی (ردیف ۱) ثبت شود.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq7">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7">
+                  چگونه استاد راهنما انتخاب کنم؟
+                </button>
+              </h2>
+              <div id="faqCollapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>انتخاب استاد راهنما در نیمسال اول یا دوم با مشاوره مدیر گروه و بر اساس زمینه تحقیقاتی دانشجو انجام می‌شود. فرم پیشنهاد مقدماتی (ردیف ۴) باید تکمیل شود.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq8">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8">
+                  شرایط ادامه تحصیل در خارج از کشور چیست؟
+                </button>
+              </h2>
+              <div id="faqCollapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>دانشجویان دکتری می‌توانند برای فرصت مطالعاتی ۶ تا ۱۲ ماهه با تأیید استاد راهنما و شورای تحصیلات تکمیلی اقدام کنند. اطلاعات بیشتر در <a href="https://me.aut.ac.ir/international" target="_blank">بخش همکاری‌های بین‌الملل</a>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq9">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9">
+                  آیا امکان اخذ واحدهای درسی در دانشگاه‌های دیگر وجود دارد؟
+                </button>
+              </h2>
+              <div id="faqCollapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>بله، دانشجویان دکتری می‌توانند با تأیید استاد راهنما و مدیر گروه، واحدهای درسی را به‌صورت مهمان در سایر دانشکده‌ها یا دانشگاه‌ها اخذ کنند. برای این منظور، فرم‌های ردیف ۲ و ۳ باید تکمیل شوند.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq10">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10">
+                  شرایط دریافت بورسیه تحصیلی چیست؟
+                </button>
+              </h2>
+              <div id="faqCollapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>بورسیه‌های تحصیلی بر اساس عملکرد علمی، رزومه پژوهشی، و توصیه‌نامه‌های اساتید اعطا می‌شود. اطلاعات بیشتر در <a href="https://me.aut.ac.ir/about/islami-scholarship" target="_blank">صفحه بورسیه دکتر محمدرضا اسلامی</a> موجود است.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq11">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11">
+                  چگونه می‌توانم موضوع رساله خود را تغییر دهم؟
+                </button>
+              </h2>
+              <div id="faqCollapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>تغییر موضوع رساله با تأیید استاد راهنما و شورای تحصیلات تکمیلی امکان‌پذیر است. دانشجو باید فرم تصویب پیشنهاد رساله (ردیف ۱۱) را مجدداً تکمیل کرده و پروپوزال جدید ارائه دهد.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12">
+                  آیا حضور در سمینارهای علمی اجباری است؟
+                </button>
+              </h2>
+              <div id="faqCollapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>حضور در سمینارهای علمی به‌عنوان بخشی از فعالیت‌های پژوهشی توصیه می‌شود، اما اجباری نیست. با این حال، برخی اساتید ممکن است شرکت در سمینارها را برای ارزیابی پیشرفت دانشجو الزامی کنند.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq13">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13">
+                  نحوه ارزیابی پیشرفت تحصیلی در دوره دکتری چگونه است؟
+                </button>
+              </h2>
+              <div id="faqCollapse13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>پیشرفت تحصیلی از طریق گزارش‌های دوره‌ای استاد راهنما، تکمیل مراحل آزمون جامع، پروپوزال، و انتشار مقالات ارزیابی می‌شود. در صورت تأخیر، فرم‌های ردیف ۹ و ۱۰ برای بررسی دلایل تأخیر استفاده می‌شوند.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <h2 class="text-center mb-4">دانشجویان دکتری فعلی</h2>
+          <div class="students-grid">
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/student/1', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="مهندس علی سلمانی‌زاده">
+              <h6>مهندس علی سلمانی‌زاده</h6>
+              <p>مکانیک جامدات</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/student/2', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="مهندس علی کاظمی">
+              <h6>مهندس علی کاظمی</h6>
+              <p>دینامیک و ارتعاشات</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/student/3', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="مهندس مصطفی باروتی">
+              <h6>مهندس مصطفی باروتی</h6>
+              <p>طراحی کاربردی</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/student/4', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="مهندس امیرحسین مالمیر">
+              <h6>مهندس امیرحسین مالمیر</h6>
+              <p>رباتیک</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <h2 class="text-center mb-4">دانشجویان دکتری فارغ‌التحصیل</h2>
+          <div class="students-grid">
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/alumni/1', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="دکتر حسین رضایی">
+              <h6>دکتر حسین رضایی</h6>
+              <p>هیئت علمی دانشگاه تهران</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/alumni/2', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="دکتر محمد کاظمی">
+              <h6>دکتر محمد کاظمی</h6>
+              <p>محقق در دانشگاه MIT</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/alumni/3', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="دکتر محمد صادقی">
+              <h6>دکتر محمد صادقی</h6>
+              <p>مدیر تحقیق و توسعه شرکت نفت</p>
+            </div>
+            <div class="student" onclick="window.open('https://me.aut.ac.ir/alumni/4', '_blank')">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIf4R5qPKHPNMyAqV-FjS_OTBB8pfUV29Phg&s" alt="دکتر نگار رحیمی">
+              <h6>دکتر نگار رحیمی</h6>
+              <p>هیئت علمی دانشگاه </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 ms-0">
+        <div class="sidebar-links" id="sidebar">
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">نحوه قبولی</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/phd/admission" target="_blank">آزمون ورودی</a>
+              <a href="https://me.aut.ac.ir/graduate/phd/interview" target="_blank">مصاحبه علمی</a>
+              <a href="https://me.aut.ac.ir/graduate/phd/requirements" target="_blank">مدارک مورد نیاز</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">تعداد ترم‌ها</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/phd/duration" target="_blank">مدت تحصیل (۸–۱۲ ترم)</a>
+              <a href="https://me.aut.ac.ir/graduate/phd/extensions" target="_blank">تمدید سنوات</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">آزمون جامع</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/comprehensive-exam" target="_blank">ساختار آزمون</a>
+              <a href="https://me.aut.ac.ir/graduate/exam-preparation" target="_blank">منابع پیشنهادی</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">دفاع پروپوزال</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/proposal" target="_blank">نحوه تدوین</a>
+              <a href="https://me.aut.ac.ir/graduate/proposal-defense" target="_blank">فرآیند دفاع</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">دفاع نهایی</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/final-defense" target="_blank">مدارک مورد نیاز</a>
+              <a href="https://me.aut.ac.ir/graduate/defense-process" target="_blank">مراحل دفاع</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">انتشار مقالات</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/publications" target="_blank">حداقل الزامات</a>
+              <a href="https://me.aut.ac.ir/graduate/journals" target="_blank">مجلات معتبر</a>
+            </div>
+          </div>
+          <div class="link-group">
+            <h6 onclick="toggleSubLinks(this)">تسویه حساب</h6>
+            <div class="sub-links">
+              <a href="https://me.aut.ac.ir/graduate/clearance" target="_blank">فرم‌های تسویه</a>
+              <a href="https://me.aut.ac.ir/graduate/graduation" target="_blank">صدور مدرک</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="floating-btn" onclick="location.href='mailto:mech@aut.ac.ir'">
+    <i class="bi bi-envelope"></i> تماس با ما
+  </button>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>ارتباط با ما</h5>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/AKUT.svg" alt="لوگوی دانشگاه" style="width: 60px; height: 80px; filter: brightness(0) invert(1); margin-bottom: 10px;">
+          <p>آدرس جدید: ایران - تهران - میدان ولیعصر - خیابان حافظ - پلاک ۳۵۰<br>صندوق پستی: ۴۴۱۳-۱۵۸۷۵</p>
+          <p>آدرس قبلی: ایران - تهران - خیابان حافظ - پلاک ۴۲۴<br>صندوق پستی: ۴۴۱۳-۱۵۸۷۵</p>
+          <p>ایمیل: <a href="mailto:office.me@aut.ac.ir">office.me@aut.ac.ir</a></p>
+          <p>تلفن: ۹۸+ (۲۱) ۶۶۴۱۹۷۳۶<br>۹۸+ (۲۱) ۶۴۵۴۳۴۰۰</p>
+          <p>کد پستی: ۱۵۹۱۶۳۴۳۱۱</p>
+        </div>
+        <div class="col-md-3">
+          <h5>لینک‌های مفید</h5>
+          <p><a href="https://aut.ac.ir">دانشگاه صنعتی امیرکبیر</a></p>
+          <p><a href="https://me.aut.ac.ir">دپارتمان مهندسی مکانیک</a></p>
+          <p><a href="https://lib.aut.ac.ir">کتابخانه مرکزی</a></p>
+          <p><a href="https://me.aut.ac.ir/faculty">اعضای هیئت علمی</a></p>
+          <p><a href="https://alumni.aut.ac.ir">جامعه دانش‌آموختگان</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>پیوندهای سریع</h5>
+          <p><a href="https://edu.aut.ac.ir">سامانه آموزشی</a></p>
+          <p><a href="https://me.aut.ac.ir/calendar">تقویم آموزشی</a></p>
+          <p><a href="https://me.aut.ac.ir/contact">تماس با دپارتمان</a></p>
+          <p><a href="https://me.aut.ac.ir/internship">کارورزی و کاریابی</a></p>
+          <p><a href="https://me.aut.ac.ir/suggestions">سامانه جامع نظام پیشنهادها</a></p>
+        </div>
+        <div class="col-md-3">
+          <h5>پیوندهای دولتی و علمی</h5>
+          <p><a href="https://leader.ir" target="_blank">دفتر مقام معظم رهبری</a></p>
+          <p><a href="https://president.ir" target="_blank">دفتر ریاست جمهوری</a></p>
+          <p><a href="https://msrt.ir" target="_blank">وزارت علوم، تحقیقات و فناوری</a></p>
+          <p><a href="https://isti.ir" target="_blank">معاونت علمی و فناوری ریاست جمهوری</a></p>
+          <p><a href="https://bonyadnelite.ir" target="_blank">بنیاد علمی نخبگان</a></p>
+          <p><a href="https://wsis.msrt.ir" target="_blank">صندوق رفاه دانشجویان وزارت علوم</a></p>
+          <p><a href="https://insf.org" target="_blank">صندوق حمایت از پژوهشگران و فناوران کشور</a></p>
+          <p><a href="https://insf.org" target="_blank">صندوق حمایت از پژوهشگران</a></p>
+          <p><a href="https://cstp.ir" target="_blank">نقشه جامع علمی کشور</a></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p>© ۲۰۲۵ دپارتمان مهندسی مکانیک - دانشگاه صنعتی امیرکبیر</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleSubLinks(element) {
+      const parent = element.closest('.link-group');
+      const isActive = parent.classList.contains('active');
+      document.querySelectorAll('.link-group').forEach(group => {
+        group.classList.remove('active');
+      });
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.sidebar-links')) {
+        document.querySelectorAll('.link-group').forEach(group => {
+          group.classList.remove('active');
+        });
+      }
+    });
+
+    function adjustSidebarPosition() {
+      const sidebar = document.getElementById('sidebar');
+      const formsSection = document.getElementById('formsSection');
+      const footer = document.getElementById('footer');
+      const formsTop = formsSection.getBoundingClientRect().top + window.pageYOffset;
+      const footerTop = footer.getBoundingClientRect().top + window.pageYOffset;
+      const scrollTop = window.pageYOffset;
+      const sidebarHeight = sidebar.offsetHeight;
+      const offset = 20;
+
+      if (scrollTop + sidebarHeight + offset > footerTop) {
+        sidebar.style.position = 'absolute';
+        sidebar.style.top = `${footerTop - sidebarHeight - formsTop}px`;
+      } else if (scrollTop + offset >= formsTop) {
+        sidebar.style.position = 'fixed';
+        sidebar.style.top = `${offset}px`;
+      } else {
+        sidebar.style.position = 'absolute';
+        sidebar.style.top = `${formsTop - scrollTop}px`;
+      }
+    }
+
+    window.addEventListener('scroll', adjustSidebarPosition);
+    window.addEventListener('resize', adjustSidebarPosition);
+    document.addEventListener('DOMContentLoaded', adjustSidebarPosition);
+  </script>
+</body>
+</html>
